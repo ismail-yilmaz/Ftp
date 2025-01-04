@@ -9,7 +9,7 @@ CONSOLE_APP_MAIN
 //	Ftp::Trace();
 
 	Ftp ftpclient;
-	if(ftpclient.Timeout(60000).Connect("ftps://demo:password@test.rebex.net:21")) {
+	if(ftpclient.Timeout(60000).Connect("ftp://demo:password@test.rebex.net:21")) {
 		auto f = ftpclient.Get("readme.txt", true);
 		if(!ftpclient.IsError()) {
 			RLOG(f);
